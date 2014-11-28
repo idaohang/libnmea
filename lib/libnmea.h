@@ -18,7 +18,7 @@
 /**
  * Determines the type of message from the given string buffer.
  */
-nmea_message_type_t nmea_get_message_type(char *message);
+LIBNMEA_PUBLIC nmea_message_type_t nmea_get_message_type(char *message);
 
 /**
  * Parses a message. If the message could not be parsed, NULL is returned. The
@@ -28,6 +28,6 @@ nmea_message_type_t nmea_get_message_type(char *message);
  * If the message could not be parsed, and if the outError pointer is non-NULL,
  * its contents will be set to the appropriate error code.
  */
-nmea_message_t *nmea_parse_message(char *message, nmea_error_t *outError);
+LIBNMEA_PUBLIC nmea_message_t *nmea_parse_message(char *message, nmea_error_t *outError);
 
 #endif

@@ -53,10 +53,12 @@ typedef struct {
 typedef struct {
 	nmea_message_type_t type;
 
-	time_t utc;
+	int utc; // seconds since midnight of today
+
 	nmea_degree_t lat, lng;
 	int quality;
 	int satellites;
+	float hdop;
 	float altitude, geoid_height;
 } nmea_message_gga_t;
 
@@ -105,7 +107,7 @@ typedef struct {
 typedef struct {
 	nmea_message_type_t type;
 	
-	float courrse_true, course_magnetic;
+	float course_true, course_magnetic;
 
 	float h_speed_knots, h_speed_kmh;
 } nmea_message_vtg_t;
