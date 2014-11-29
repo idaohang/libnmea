@@ -1,3 +1,5 @@
 *.d
 *.obj
 *.so
+lib/libnmea.o
+lib/main.o
